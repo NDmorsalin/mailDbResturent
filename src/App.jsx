@@ -11,12 +11,12 @@ function App() {
   useEffect(() => {
     const fetchFood = async () => {
       const url = searchText
-        ? `https://www.themealdb.com/api/json/v1/1/search.php?f=${searchText}`
+        ? `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`
         : "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood";
 
       const response = await fetch(url);
       const data = await response.json();
-      setFoods(data.meals);
+      setFoods(data.meals||[]);
     };
 
     fetchFood();

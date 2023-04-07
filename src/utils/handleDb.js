@@ -1,0 +1,3 @@
+/* const getFromLocalStorage = ()=>{
+    const shoppingCart = 
+} */
